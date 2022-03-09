@@ -30,41 +30,51 @@ class _InfoScreenState extends State<InfoScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Details'),
-        backgroundColor: Colors.lightBlueAccent,
+        title: Text('Your Data is here'),
+        backgroundColor: Colors.pink,
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 38.0),
+          padding: const EdgeInsets.symmetric(horizontal: 40.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Welcome, ${widget.name}',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.pink,
                   fontSize: 32,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.bold,
+                  // backgroundColor: Colors.green,
+                  // decorationStyle: TextDecorationStyle.dotted,
+                  decorationColor: Colors.red,
                 ),
+              ),
+              SizedBox(
+                height: 20,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Email:- ${widget.email}',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: TextStyle(
+                      color: Colors.purple,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   SizedBox(height: 20),
                   Text(
-                    'PRN:- ${widget.prn}',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    'City:- ${widget.prn}',
+                    style: TextStyle(
+                      color: Colors.purple,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   SizedBox(height: 20),
-                  Text(
-                    'Gender:- $gender',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
-                  ),
                 ],
               )
             ],
